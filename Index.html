@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achuth Ram M - Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p, .section ul {
+            line-height: 1.6;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: #007BFF;
+        }
+        .skills ul, .certifications ul, .achievements ul, .publications ul, .references ul {
+            column-count: 2;
+            column-gap: 20px;
+        }
+        .references a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .references a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .skills ul, .certifications ul, .achievements ul, .publications ul, .references ul {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Achuth Ram M</h1>
+        <p>Kozhikode, Kerala, India</p>
+    </header>
+    <div class="container">
+        <div class="section contact-info">
+            <h2>Contact Information</h2>
+            <ul>
+                <li>Phone: <span id="phone-number">+91 8129749687</span></li>
+                <li>Email: <a href="mailto:achuthram555@gmail.com">achuthram555@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/achuth-ram-m-0b86b0195" target="_blank">linkedin.com/in/achuth-ram-m-0b86b0195</a></li>
+            </ul>
+            <button onclick="revealPhoneNumber()">Reveal Phone Number</button>
+        </div>
+        <div class="section summary">
+            <h2>Summary</h2>
+            <p>Motivated Mechanical Engineering graduate with strong problem-solving skills and experience in project management, innovation promotion, and team coordination. Proficient in various engineering software and committed to contributing effectively to team projects and organizational goals.</p>
+        </div>
+        <div class="section education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Rajagiri School of Engineering and Technology</strong><br>
+                    B. Tech in Mechanical Engineering (2018 - 2022) | CGPA: 7.13
+                </li>
+                <li>
+                    <strong>Silver Hills Public School</strong><br>
+                    Secondary & Higher Secondary Education (CBSE) (2015 - 2018) | Aggregate: 82.8%
+                </li>
+            </ul>
+        </div>
+        <div class="section experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <strong>Kerala Start-up Mission (KSUM)</strong><br>
+                    <em>Technology Fellow (December 2023 - Present)</em>
+                    <ul>
+                        <li>Leading the Young Innovator's Programme (YIP) initiative to foster innovation and entrepreneurship among students.</li>
+                        <li>Coordinating ideation workshops, training sessions, and pitch events to develop ideas into viable startups.</li>
+                    </ul>
+                </li>
+                <li>
+                    <em>Project Management Coordinator Intern (June 2022 - April 2023)</em>
+                    <ul>
+                        <li>Managed the YIP initiative, promoting innovation and entrepreneurship.</li>
+                        <li>Organized and facilitated workshops, trainings, and pitching sessions.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="section projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Forest Fire Detection Drone System</strong>
+                    <p>Developed a drone system for early forest fire detection using image processing cameras and flame/smoke sensors.</p>
+                </li>
+                <li>
+                    <strong>Assistive Mechanism for the Visually Impaired</strong>
+                    <p>Created a cost-effective, compact device for obstacle avoidance using laser systems, providing feedback via audio and vibrations.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="section skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Software:</strong> AutoCAD, CATIA, ANSYS, Photoshop, Microsoft Office, Google Tools</li>
+                <li><strong>Programming:</strong> C++, Python</li>
+                <li><strong>Soft Skills:</strong> Leadership, Team Collaboration, Time Management, Communication, Attention to Detail</li>
+            </ul>
+        </div>
+        <div class="section certifications">
+            <h2>Certifications & Training</h2>
+            <ul>
+                <li>ASME Standards & Certification by ASME</li>
+                <li>Google Apps Script Course from Udemy</li>
+                <li>Automotive Electrical & Vehicle Diagnosis (Online Internship with BOSCH)</li>
+                <li>Mindrone Workshop by MathWorks</li>
+                <li>Electric Vehicle Internship by Reynlabs & Techmaghi</li>
+            </ul>
+        </div>
+        <div class="section achievements">
+            <h2>Achievements & Awards</h2>
+            <ul>
+                <li>17th place in IAM3D Drone-making Competition (ASME)</li>
+                <li>Resource Person for S.A.L.T (Startup Awareness and Leadership Training)</li>
+                <li>Qualified for IDEA FEST'22 and YIP by KSUM for assistive mechanism project.</li>
+                <li>Presented a paper on the assistive mechanism at ICT4SD Goa.</li>
+                <li>Part of organizing committee for YIP 3.0, 4.0, 5.0, Huddle Global 2022 & 2023, IEDC Summit 2023, Seeding Kerala 2023.</li>
+            </ul>
+        </div>
+        <div class="section publications">
+            <h2>Publications</h2>
+            <ul>
+                <li>Published paper on assistive mechanism for the visually impaired in Springer Lecture Notes in Networks and Systems</li>
+            </ul>
+        </div>
+        <div class="section references">
+            <h2>References</h2>
+            <ul>
+                <li>
+                    <strong>Dr. Vishnu Sankar</strong><br>
+                    Assistant Professor, Dept. of Mechanical Engineering,<br>
+                    Rajagiri School of Engineering and Technology<br>
+                    Phone: +91 9597683959 | Email: <a href="mailto:vishnus@rajagiritech.edu.in">vishnus@rajagiritech.edu.in</a>
+                </li>
+                <li>
+                    <strong>Mr. Nitheesh Kurian</strong><br>
+                    Assistant Professor, Dept. of Electronics and Communication Engineering,<br>
+                    Rajagiri School of Engineering and Technology<br>
+                    Phone: +91 9497413879 | Email: <a href="mailto:nitheeshk@rajagiritech.edu.in">nitheeshk@rajagiritech.edu.in</a>
+                </li>
+                <li>
+                    <strong>Ms. Arya Krishnan</strong><br>
+                    Technical Officer, IT Department,<br>
+                    Kerala Start-up Mission<br>
+                    Phone: +91 8606248688 | Email: <a href="mailto:arya@startupmission.in">arya@startupmission.in</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Achuth Ram M. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function revealPhoneNumber() {
+            const phoneNumber = document.getElementById('phone-number');
+            if (phoneNumber.style.display === 'none') {
+                phoneNumber.style.display = 'inline';
+            } else {
+                phoneNumber.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
