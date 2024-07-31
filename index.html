@@ -6,7 +6,6 @@
     <title>Achuth Ram M - Personal Webpage</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -23,8 +22,12 @@
             background: linear-gradient(to right, #4e54c8, #8f94fb);
             color: #fff;
             text-align: center;
-            padding: 40px 0;
+            padding: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         header h1 {
             font-size: 2.5em;
@@ -33,12 +36,13 @@
         header nav ul {
             list-style: none;
             padding: 0;
-            margin-top: 20px;
+            margin-top: 10px;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         header nav ul li {
-            margin: 0 10px;
+            margin: 5px 10px;
         }
         header nav ul li a {
             text-decoration: none;
@@ -54,9 +58,13 @@
         .main-content {
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
+            margin-top: 120px; /* Increased top margin to account for the header */
             margin-bottom: 20px;
             border-radius: 10px;
             opacity: 0;
+        }
+        .section {
+            margin-bottom: 40px;
         }
         .section h2 {
             border-bottom: 2px solid #4e54c8;
@@ -69,8 +77,8 @@
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            padding: 10px;
+            margin-top: 20px;
         }
         footer p {
             margin: 0;
@@ -79,7 +87,7 @@
 </head>
 <body>
     <header class="animate__animated animate__fadeInDown">
-        <h1>Achuth Ram M</h1>
+        <h1 id="header-title">Achuth Ram M</h1>
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
@@ -183,11 +191,17 @@
             </div>
         </div>
     </div>
-    <footer class="bg-gray-800 text-white text-center py-4 mt-6 animate__animated animate__fadeInUp">
+    <footer class="bg-gray-800 text-white text-center py-2 mt-6">
         <p>&copy; 2024 Achuth Ram M. All rights reserved.</p>
     </footer>
+
+    <!-- Include the necessary libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+
     <script>
+        // Anime.js animation for headings
         anime({
             targets: 'h2',
             translateY: [-50, 0],
@@ -197,6 +211,7 @@
             delay: anime.stagger(100)
         });
 
+        // ScrollReveal animations
         ScrollReveal().reveal('.main-content', {
             duration: 1000,
             origin: 'bottom',
@@ -204,11 +219,27 @@
             reset: true
         });
 
+        // GSAP animation for the header title
+        gsap.from("#header-title", {
+            duration: 1,
+            y: -50,
+            opacity: 0,
+            ease: "bounce.out"
+        });
+
+        // Smooth scrolling with offset for fixed header
         document.querySelectorAll('header a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - headerHeight;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
                 });
             });
         });
