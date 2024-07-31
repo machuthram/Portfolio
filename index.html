@@ -58,7 +58,7 @@
         .main-content {
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            margin-top: 120px; /* Increased top margin to account for the header */
+            margin-top: 140px; /* Increased top margin to account for the header */
             margin-bottom: 20px;
             border-radius: 10px;
             opacity: 0;
@@ -82,6 +82,24 @@
         }
         footer p {
             margin: 0;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 0;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            header nav ul li {
+                margin: 5px 0;
+            }
+            .main-content {
+                margin-top: 180px; /* Increased margin for mobile view */
+            }
         }
     </style>
 </head>
@@ -235,7 +253,7 @@
                 const targetElement = document.getElementById(targetId);
                 const headerHeight = document.querySelector('header').offsetHeight;
                 const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-                const offsetPosition = elementPosition - headerHeight;
+                const offsetPosition = elementPosition - headerHeight - 20; // Additional offset for margin
 
                 window.scrollTo({
                     top: offsetPosition,
