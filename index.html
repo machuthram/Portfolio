@@ -9,96 +9,178 @@
     <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
     <style>
         body {
+            font-family: 'Roboto', sans-serif;
             scroll-behavior: smooth;
+            background: linear-gradient(135deg, #2a2a72 25%, #009ffd);
+            color: #fff;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+            margin: 0 10px;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        header nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .main-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            opacity: 0;
+        }
+        .section h2 {
+            border-bottom: 2px solid #4e54c8;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #ffd700;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <header class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-center py-6 shadow-md animate__animated animate__fadeInDown">
-        <h1 class="text-4xl font-bold">Achuth Ram M</h1>
-        <nav class="mt-4">
-            <ul class="flex justify-center space-x-4">
-                <li><a href="#about" class="hover:text-gray-300">About Me</a></li>
-                <li><a href="#education" class="hover:text-gray-300">Education</a></li>
-                <li><a href="#experience" class="hover:text-gray-300">Experience</a></li>
-                <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
-                <li><a href="#skills" class="hover:text-gray-300">Skills</a></li>
-                <li><a href="#certifications" class="hover:text-gray-300">Certifications</a></li>
-                <li><a href="#achievements" class="hover:text-gray-300">Achievements</a></li>
-                <li><a href="#publications" class="hover:text-gray-300">Publications</a></li>
-                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+<body>
+    <header class="animate__animated animate__fadeInDown">
+        <h1>Achuth Ram M</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div class="container mx-auto mt-8 px-4">
-        <div id="about" class="bg-white p-6 rounded-lg shadow-md mb-6 animate__animated animate__fadeInUp">
-            <h2 class="text-2xl font-semibold border-b-2 border-indigo-500 pb-2 mb-4 animate__animated animate__bounceInLeft">About Me</h2>
-            <p>Motivated Mechanical Engineering graduate with strong problem-solving skills and experience in project management, innovation promotion, and team coordination. Proficient in various engineering software and committed to contributing effectively to team projects and organizational goals.</p>
+    <div class="container">
+        <div id="about" class="main-content animate__animated animate__fadeInUp">
+            <div class="section">
+                <h2>About Me</h2>
+                <p>Motivated Mechanical Engineering graduate with strong problem-solving skills and experience in project management, innovation promotion, and team coordination. Proficient in various engineering software and committed to contributing effectively to team projects and organizational goals.</p>
+            </div>
         </div>
-        <div id="education" class="bg-white p-6 rounded-lg shadow-md mb-6 animate__animated animate__fadeInUp">
-            <h2 class="text-2xl font-semibold border-b-2 border-indigo-500 pb-2 mb-4 animate__animated animate__bounceInLeft">Education</h2>
-            <p><strong>Rajagiri School of Engineering and Technology</strong></p>
-            <p>B. Tech in Mechanical Engineering, 2018 - 2022 | CGPA: 7.13</p>
-            <p><strong>Silver Hills Public School</strong></p>
-            <p>Secondary & Higher Secondary Education (CBSE), 2015 - 2018 | Aggregate: 82.8%</p>
+        <div id="education" class="main-content animate__animated animate__fadeInUp">
+            <div class="section">
+                <h2>Education</h2>
+                <p><strong>Rajagiri School of Engineering and Technology</strong></p>
+                <p>B. Tech in Mechanical Engineering, 2018 - 2022 | CGPA: 7.13</p>
+                <p><strong>Silver Hills Public School</strong></p>
+                <p>Secondary & Higher Secondary Education (CBSE), 2015 - 2018 | Aggregate: 82.8%</p>
+            </div>
         </div>
-        <div id="experience" class="bg-white p-6 rounded-lg shadow-md mb-6 animate__animated animate__fadeInUp">
-            <h2 class="text-2xl font-semibold border-b-2 border-indigo-500 pb-2 mb-4 animate__animated animate__bounceInLeft">Experience</h2>
-            <p><strong>Kerala Start-up Mission (KSUM)</strong></p>
-            <p>Technology Fellow, December 2023 - Present</p>
-            <ul class="list-disc pl-5">
-                <li>Leading the Young Innovator's Programme (YIP) initiative to foster innovation and entrepreneurship among students.</li>
-                <li>Coordinating ideation workshops, training sessions, and pitch events to develop ideas into viable startups.</li>
-            </ul>
-            <p>Project Management Coordinator Intern, June 2022 - April 2023</p>
-            <ul class="list-disc pl-5">
-                <li>Managed the YIP initiative, promoting innovation and entrepreneurship.</li>
-                <li>Organized and facilitated workshops, trainings, and pitching sessions.</li>
-            </ul>
+        <div id="experience" class="main-content animate__animated animate__fadeInUp">
+            <div class="section">
+                <h2>Experience</h2>
+                <p><strong>Kerala Start-up Mission (KSUM)</strong></p>
+                <p>Technology Fellow, December 2023 - Present</p>
+                <ul class="list-disc pl-5">
+                    <li>Leading the Young Innovator's Programme (YIP) initiative to foster innovation and entrepreneurship among students.</li>
+                    <li>Coordinating ideation workshops, training sessions, and pitch events to develop ideas into viable startups.</li>
+                </ul>
+                <p>Project Management Coordinator Intern, June 2022 - April 2023</p>
+                <ul class="list-disc pl-5">
+                    <li>Managed the YIP initiative, promoting innovation and entrepreneurship.</li>
+                    <li>Organized and facilitated workshops, trainings, and pitching sessions.</li>
+                </ul>
+            </div>
         </div>
-        <div id="projects" class="bg-white p-6 rounded-lg shadow-md mb-6 animate__animated animate__fadeInUp">
-            <h2 class="text-2xl font-semibold border-b-2 border-indigo-500 pb-2 mb-4 animate__animated animate__bounceInLeft">Projects</h2>
-            <p><strong>Forest Fire Detection Drone System</strong></p>
-            <p>Developed a drone system for early forest fire detection using image processing cameras and flame/smoke sensors.</p>
-            <p><strong>Assistive Mechanism for the Visually Impaired</strong></p>
-            <p>Created a cost-effective, compact device for obstacle avoidance using laser systems, providing feedback via audio and vibrations.</p>
+        <div id="projects" class="main-content animate__animated animate__fadeInUp">
+            <div class="section">
+                <h2>Projects</h2>
+                <p><strong>Forest Fire Detection Drone System</strong></p>
+                <p>Developed a drone system for early forest fire detection using image processing cameras and flame/smoke sensors.</p>
+                <p><strong>Assistive Mechanism for the Visually Impaired</strong></p>
+                <p>Created a cost-effective, compact device for obstacle avoidance using laser systems, providing feedback via audio and vibrations.</p>
+            </div>
         </div>
-        <div id="skills" class="bg-white p-6 rounded-lg shadow-md mb-6 animate__animated animate__fadeInUp">
-            <h2 class="text-2xl font-semibold border-b-2 border-indigo-500 pb-2 mb-4 animate__animated animate__bounceInLeft">Skills</h2>
-            <p><strong>Software:</strong> AutoCAD, CATIA, ANSYS, Photoshop, Microsoft Office, Google Tools</p>
-            <p><strong>Programming:</strong> C++, Python</p>
-            <p><strong>Soft Skills:</strong> Leadership, Team Collaboration, Time Management, Communication, Attention to Detail</p>
+        <div id="skills" class="main-content animate__animated animate__fadeInUp">
+            <div class="section">
+                <h2>Skills</h2>
+                <p><strong>Software:</strong> AutoCAD, CATIA, ANSYS, Photoshop, Microsoft Office, Google Tools</p>
+                <p><strong>Programming:</strong> C++, Python</p>
+                <p><strong>Soft Skills:</strong> Leadership, Team Collaboration, Time Management, Communication, Attention to Detail</p>
+            </div>
         </div>
-        <div id="certifications" class="bg-white p-6 rounded-lg shadow-md mb-6 animate__animated animate__fadeInUp">
-            <h2 class="text-2xl font-semibold border-b-2 border-indigo-500 pb-2 mb-4 animate__animated animate__bounceInLeft">Certifications</h2>
-            <ul class="list-disc pl-5">
-                <li>ASME Standards & Certification by ASME</li>
-                <li>Google Apps Script Course from Udemy</li>
-                <li>Automotive Electrical & Vehicle Diagnosis (Online Internship with BOSCH)</li>
-                <li>Mindrone Workshop by MathWorks</li>
-                <li>Electric Vehicle Internship by Reynlabs & Techmaghi</li>
-            </ul>
+        <div id="certifications" class="main-content animate__animated animate__fadeInUp">
+            <div class="section">
+                <h2>Certifications</h2>
+                <ul class="list-disc pl-5">
+                    <li>ASME Standards & Certification by ASME</li>
+                    <li>Google Apps Script Course from Udemy</li>
+                    <li>Automotive Electrical & Vehicle Diagnosis (Online Internship with BOSCH)</li>
+                    <li>Mindrone Workshop by MathWorks</li>
+                    <li>Electric Vehicle Internship by Reynlabs & Techmaghi</li>
+                </ul>
+            </div>
         </div>
-        <div id="achievements" class="bg-white p-6 rounded-lg shadow-md mb-6 animate__animated animate__fadeInUp">
-            <h2 class="text-2xl font-semibold border-b-2 border-indigo-500 pb-2 mb-4 animate__animated animate__bounceInLeft">Achievements</h2>
-            <ul class="list-disc pl-5">
-                <li>17th place in IAM3D Drone-making Competition (ASME)</li>
-                <li>Resource Person for S.A.L.T (Startup Awareness and Leadership Training)</li>
-                <li>Qualified for IDEA FEST'22 and YIP by KSUM for assistive mechanism project</li>
-                <li>Presented a paper on the assistive mechanism at ICT4SD Goa</li>
-                <li>Part of organizing committee for YIP 3.0, 4.0, 5.0, Huddle Global 2022 & 2023, IEDC Summit 2023, Seeding Kerala 2023</li>
-            </ul>
+        <div id="achievements" class="main-content animate__animated animate__fadeInUp">
+            <div class="section">
+                <h2>Achievements</h2>
+                <ul class="list-disc pl-5">
+                    <li>17th place in IAM3D Drone-making Competition (ASME)</li>
+                    <li>Resource Person for S.A.L.T (Startup Awareness and Leadership Training)</li>
+                    <li>Qualified for IDEA FEST'22 and YIP by KSUM for assistive mechanism project</li>
+                    <li>Presented a paper on the assistive mechanism at ICT4SD Goa</li>
+                    <li>Part of organizing committee for YIP 3.0, 4.0, 5.0, Huddle Global 2022 & 2023, IEDC Summit 2023, Seeding Kerala 2023</li>
+                </ul>
+            </div>
         </div>
-        <div id="publications" class="bg-white p-6 rounded-lg shadow-md mb-6 animate__animated animate__fadeInUp">
-            <h2 class="text-2xl font-semibold border-b-2 border-indigo-500 pb-2 mb-4 animate__animated animate__bounceInLeft">Publications</h2>
-            <p>Published paper on assistive mechanism for the visually impaired in Springer Lecture Notes in Networks and Systems</p>
+        <div id="publications" class="main-content animate__animated animate__fadeInUp">
+            <div class="section">
+                <h2>Publications</h2>
+                <p>Published paper on assistive mechanism for the visually impaired in Springer Lecture Notes in Networks and Systems</p>
+            </div>
         </div>
-        <div id="contact" class="bg-white p-6 rounded-lg shadow-md mb-6 animate__animated animate__fadeInUp">
-            <h2 class="text-2xl font-semibold border-b-2 border-indigo-500 pb-2 mb-4 animate__animated animate__bounceInLeft">Contact</h2>
-            <p><strong>Location:</strong> Kozhikode, Kerala, India</p>
-            <p><strong>Phone:</strong> +91 8129749687</p>
-            <p><strong>Email:</strong> <a href="mailto:achuthram555@gmail.com" class="text-indigo-500 hover:underline">achuthram555@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/achuth-ram-m-0b86b0195" target="_blank" class="text-indigo-500 hover:underline">LinkedIn Profile</a></p>
+        <div id="contact" class="main-content animate__animated animate__fadeInUp">
+            <div class="section">
+                <h2>Contact</h2>
+                <p><strong>Location:</strong> Kozhikode, Kerala, India</p>
+                <p><strong>Phone:</strong> +91 8129749687</p>
+                <p><strong>Email:</strong> <a href="mailto:achuthram555@gmail.com" class="text-indigo-400 hover:underline">achuthram555@gmail.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/achuth-ram-m-0b86b0195" target="_blank" class="text-indigo-400 hover:underline">LinkedIn Profile</a></p>
+            </div>
         </div>
     </div>
     <footer class="bg-gray-800 text-white text-center py-4 mt-6 animate__animated animate__fadeInUp">
